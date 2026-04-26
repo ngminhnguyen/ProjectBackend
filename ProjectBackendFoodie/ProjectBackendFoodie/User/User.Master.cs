@@ -11,27 +11,19 @@ namespace ProjectBackendFoodie.User
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Url.AbsoluteUri.ToString().Contains("Default.aspx"))
+            if (!Request.Url.AbsoluteUri.ToString().Contains("Default.aspx"))
             {
-                
+                form1.Attributes.Add("class", "sub_page");
             }
             else
             {
                 form1.Attributes.Remove("class");
-
-                //load the control
-                Control sliderUserControl = (Control)Page.LoadControl("SliderUserControl.ascx");
+                //Load the control
+                Control sliderUserControl = (Control)Page.LoadControl("~/User/SliderUserControl.ascx");
 
                 //Add the control to the panel
-               pnlSliderUC.Controls.Add(sliderUserControl);
+                pnlSliderUC.Controls.Add(sliderUserControl);
 
-            }
-
-            if (Session["userId"] != null)
-            {
-                lbLoginOrLogout.Text = "Logout";
-                Utils utils = new Utils();
-                Session["cartCount"] = utils.cartCount(Convert.ToInt32(Session["userId"]).ToString);
             }
         }
     }

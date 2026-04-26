@@ -1,6 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="ProjectBackendFoodie.User.User" %>
 
-<%@ Register Src="file:///e:\backend\projectbackend\projectbackend\projectbackendfoodie\projectbackendfoodie\user\SliderUserControl.ascx.designer.csfile:///e:\backend\projectbackend\projectbackend\projectbackendfoodie\projectbackendfoodie\user\SliderUserControl.ascx.csfile:///e:\backend\projectbackend\projectbackend\projectbackendfoodie\projectbackendfoodie\user\SliderUserControl.ascx" TagPrefix="uc1" TagName="SliderUserControl" %>
+<%@ Register Src="~\User\SliderUserControl.ascx" TagPrefix="uc1" TagName="SliderUserControl" %>
+
 
 
 <!DOCTYPE html>
@@ -38,7 +39,7 @@
   <asp:ContentPlaceHolder ID="head" runat="server">
   </asp:ContentPlaceHolder>
 </head>
-<body>
+<body >
     <form id="form1" runat="server">
        <div class="hero_area">
     <div class="bg-box">
@@ -61,16 +62,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  mx-auto ">
               <li class="nav-item active">
-                <a class="nav-link" href="Defaul.aspx">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="Default.aspx">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Menu.aspx">Menu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="About.aspx">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="book.html">Book Table</a>
+                <a class="nav-link" href="Contact.aspx">Contact</a>
               </li>
             </ul>
             <div class="user_option">
@@ -146,9 +147,7 @@
     </header>
     <!-- end header section -->
     <!-- slider section -->
-           <a href="file:///e:\backend\projectbackend\projectbackend\projectbackendfoodie\projectbackendfoodie\user\SliderUserControl.ascx.designer.cs">file:///e:\backend\projectbackend\projectbackend\projectbackendfoodie\projectbackendfoodie\user\SliderUserControl.ascx.designer.cs</a>
-           <a href="file:///e:\backend\projectbackend\projectbackend\projectbackendfoodie\projectbackendfoodie\user\SliderUserControl.ascx.designer.csfile:///e:\backend\projectbackend\projectbackend\projectbackendfoodie\projectbackendfoodie\user\SliderUserControl.ascx.cs">file:///e:\backend\projectbackend\projectbackend\projectbackendfoodie\projectbackendfoodie\user\SliderUserControl.ascx.designer.csfile:///e:\backend\projectbackend\projectbackend\projectbackendfoodie\projectbackendfoodie\user\SliderUserControl.ascx.cs</a>
-           <uc1:sliderusercontrol runat="server" id="SliderUserControl" />
+           <asp:Panel ID="pnlSliderUC" runat="server"></asp:Panel>
     <!-- end slider section -->
   </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
